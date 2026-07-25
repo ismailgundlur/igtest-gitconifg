@@ -1,0 +1,20 @@
+{
+	"name": "DS_ADLS_CSVFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_Connection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Firsttargetfile",
+				"folderPath": "Ready datasets",
+				"fileSystem": "igtestcontainer"
+			}
+		},
+		"schema": []
+	}
+}
