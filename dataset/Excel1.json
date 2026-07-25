@@ -1,0 +1,24 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_Connection",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "igtest_dataset1"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Employees",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Employees_SQL_Sample.xlsx",
+				"folderPath": "Rawdatasets",
+				"fileSystem": "igtestcontainer"
+			}
+		},
+		"schema": []
+	}
+}
