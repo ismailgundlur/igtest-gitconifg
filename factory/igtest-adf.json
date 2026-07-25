@@ -1,0 +1,15 @@
+{
+	"name": "igtest-adf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3eb4da4b-39bf-4a20-9f32-1d42b6874fa1",
+		"tenantId": "7702ee9e-cb21-4108-b940-0c813ac062a5"
+	}
+}
