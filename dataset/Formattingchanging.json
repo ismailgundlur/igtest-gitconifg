@@ -1,0 +1,36 @@
+{
+	"name": "Formattingchanging",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_Connection",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Folder": {
+				"type": "string"
+			},
+			"File": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "igtest_dataset1"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().file",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat('Ready datasets', dataset().Folder)",
+					"type": "Expression"
+				},
+				"fileSystem": "igtestcontainer"
+			}
+		}
+	}
+}
