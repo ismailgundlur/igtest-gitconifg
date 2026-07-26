@@ -1,0 +1,35 @@
+{
+	"name": "multipletables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ADLS_Connection",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SRC_destinationofmultipledata": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "igtest_dataset1"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().SRC_destinationofmultipledata",
+					"type": "Expression"
+				},
+				"folderPath": "Rawdatasets",
+				"fileSystem": "igtestcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
